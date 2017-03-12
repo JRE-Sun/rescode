@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>禁止鼠标右键和F12</title>
+    <script>
+        document.onkeydown = function(e) {
+            e = e || event;
+            if (e && e.keyCode == 123) {
+                e.keyCode = 0;
+                e.returnValue = false;
+                return false;
+            }
+        };
+        document.oncontextmenu = function() {
+            return false;
+        };
+    </script>
+</head>
+
+<body>
+    禁止鼠标右键和F12
+</body>
+
+</html>
